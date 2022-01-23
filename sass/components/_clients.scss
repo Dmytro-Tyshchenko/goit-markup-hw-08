@@ -1,0 +1,53 @@
+.clients {
+  @extend %section;
+}
+.clientsContainer {
+  @extend %container;
+}
+.clients__title {
+  @extend %h2, %main-font;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+.group {
+  @extend %ul-item;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+.group__item:not(:first-child) {
+  margin-left: 30px;
+}
+.group__link {
+  @extend %a-link;
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid $social-link-color;
+  border-radius: 4px;
+  justify-content: center;
+  color: $social-link-color;
+  padding: 16px 32px;
+
+  transition-property: background-color color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    color: $accent-color;
+
+    transition-property: background-color color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.group__icon {
+  fill: currentColor;
+}

@@ -1,0 +1,84 @@
+.hero {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding-top: 180px;
+  padding-bottom: 220px;
+  text-align: center;
+  background-color: #2f303a;
+}
+.hero__title {
+  @extend %h1, %main-font;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+.button {
+  padding: 10px 32px;
+  border-radius: 4px;
+  border: none;
+
+  font-family: 'Roboto', sans-serif;
+  color: $primary-white-color;
+  background-color: $accent-color;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+}
+.heroList {
+  @extend %section;
+}
+.heroListContainer {
+  @extend %container;
+}
+.advantages {
+  @extend %ul-item;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+}
+.advantages__item:not(:first-child) {
+  margin-left: 30px;
+}
+.icon {
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  justify-content: center;
+}
+.visuallyHidden {
+  @extend %h2, %visually-hidden;
+}
+.advantages__title {
+  @extend %h2, %main-font;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.advantages__paragraph {
+  @extend %main-font;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 270px;
+
+  font-size: 14px;
+  line-height: 1.8;
+}

@@ -1,0 +1,47 @@
+.portfolio {
+  @extend %section;
+  border-top: 1px solid #eeeeee;
+}
+.portfolioContainer {
+  @extend %container;
+}
+.buttonList {
+  @extend %ul-item;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-left: 0;
+}
+.buttonList__item:not(:first-child) {
+  margin-left: 8px;
+}
+.buttonList__btn {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  font-family: 'Roboto', sans-serif;
+  color: $primary-text-color;
+  background-color: $bg-color-button;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+
+  transition-property: background-color color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background-color: $accent-color;
+
+    transition-property: background-color color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
