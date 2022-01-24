@@ -46,20 +46,24 @@
 }
 .advantages {
   @extend %ul-item;
-  display: flex;
+  // display: flex;
   margin: 0;
   padding: 0;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
 }
-.advantages__item:not(:first-child) {
-  margin-left: 30px;
-}
+// .advantages__item:not(:first-child) {
+//   margin-left: 30px;
+// }
 .icon {
   height: 120px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
   justify-content: center;
+
+  &__svg {
+    width: 450px;
+  }
 }
 .visuallyHidden {
   @extend %h2, %visually-hidden;
@@ -72,13 +76,16 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 }
 .advantages__paragraph {
   @extend %main-font;
   margin-top: 0;
   margin-bottom: 0;
-  width: 270px;
+  // width: 270px;
+  width: 450px;
 
   font-size: 14px;
   line-height: 1.8;
+  text-align: center;
 }

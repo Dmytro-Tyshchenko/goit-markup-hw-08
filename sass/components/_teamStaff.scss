@@ -18,10 +18,10 @@
 // -----------------------------------------
 .profile {
   @extend %ul-item;
-  display: flex;
+  // display: flex;
   margin: 0;
   padding: 0;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
 }
 .profile__card {
   background-color: #fff;
@@ -31,11 +31,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.profile__card:not(:first-child) {
-  margin-left: 30px;
-}
+// .profile__card:not(:first-child) {
+//   margin-left: 30px;
+// }
 .profile__pic {
   @extend %block;
+  width: 450px;
 }
 .profile__info {
   margin: 0;

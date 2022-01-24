@@ -6,12 +6,14 @@
   @extend %container;
 }
 .footerBlock {
-  display: flex;
+  // display: flex;
   margin: 0;
   padding: 0;
 }
 .footerLogo {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 .footerLogo__link {
   @extend %a-link, %logo-font;
@@ -31,10 +33,13 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
+  text-align: center;
 }
 .address__paragraph {
   margin-top: 0;
-  margin-bottom: 9px;
+  // margin-bottom: 9px;
+  margin-bottom: 8px;
+  text-align: center;
 }
 .footerContact {
   @extend %ul-item;
@@ -42,10 +47,12 @@
   padding: 0;
 }
 .footerContact__item {
-  margin-bottom: 9px;
+  // margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 .footerContact__link {
   @extend %a-link, %main-font;
+
   color: #ffffff99;
 
   transition-property: color;
@@ -63,23 +70,28 @@
 }
 
 // -------------------------------
-.joint {
-  margin-left: 70px;
-}
+// .joint {
+//   margin-left: 70px;
+// }
 .joint__title {
   @extend %h3, %main-font;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
+
   color: #ffffff;
+  margin-top: 60px;
   margin-bottom: 20px;
 }
 .footerNav {
   @extend %ul-item;
   display: flex;
+  justify-content: center;
   padding: 0;
   margin: 0;
+  margin-bottom: 60px;
 }
 .footerNav__item:not(:first-child) {
   margin-left: 10px;
@@ -115,11 +127,12 @@
 }
 // -------------------------------
 .footerForm {
-  margin-left: 88px;
+  // margin-left: 88px;
 }
 .footerLabel {
   @extend %main-font;
   display: flex;
+  justify-content: center;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -129,10 +142,12 @@
   color: $primary-white-color;
 }
 .footerInput {
-  min-width: 358px;
+  // min-width: 358px;
+  min-width: 450px;
   height: 50px;
   padding-left: 16px;
   margin: 0;
+  margin-bottom: 20px;
   color: $primary-white-color;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -141,9 +156,11 @@
   background-color: transparent;
 }
 .footerButton {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 12px;
+  // display: inline-flex;
+  display: flex;
+  // margin-left: 12px;
+  margin: 0 auto;
+  justify-content: center;
 
   padding-top: 10px;
   padding-left: 29px;
