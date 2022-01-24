@@ -44,9 +44,28 @@
 }
 
 .header, .heroListContainer, .servicesContainer, .staffContainer, .clientsContainer, .footerContainer, .portfolioContainer {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .header, .heroListContainer, .servicesContainer, .staffContainer, .clientsContainer, .footerContainer, .portfolioContainer {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header, .heroListContainer, .servicesContainer, .staffContainer, .clientsContainer, .footerContainer, .portfolioContainer {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header, .heroListContainer, .servicesContainer, .staffContainer, .clientsContainer, .footerContainer, .portfolioContainer {
+    width: 1200px;
+  }
 }
 
 .heroList, .services, .staff, .clients, .portfolio {
@@ -90,18 +109,8 @@
   color: rgba(117, 117, 117, 0.5);
 }
 
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 32px 0;
-}
-
 .logo {
-  margin-right: 93px;
+  margin-right: 276px;
   color: #212121;
 }
 
@@ -110,12 +119,6 @@
 }
 
 .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -144,27 +147,9 @@
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation__item:not(:first-child) {
-  margin-left: 50px;
-}
-
 .navigation__link {
   position: relative;
-  padding: 40px 0;
   color: #212121;
-}
-
-.navigation__link--current::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #2196f3;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  bottom: 0;
-  right: 0;
-  opacity: 1;
 }
 
 .navigation__link--currColor {
@@ -172,14 +157,10 @@
 }
 
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
-  padding-left: 10px;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -209,10 +190,6 @@
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact__item:not(:first-child) {
-  margin-left: 50px;
 }
 
 .contact__icon {
