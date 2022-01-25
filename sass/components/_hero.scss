@@ -5,8 +5,9 @@
   background-position: center;
   background-size: cover;
 
-  padding-top: 180px;
-  padding-bottom: 220px;
+  // padding-top: 180px;
+  // padding-bottom: 220px;
+  padding: 118px 60px;
   text-align: center;
   background-color: #2f303a;
 }
@@ -15,8 +16,10 @@
   margin-bottom: 30px;
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  // font-size: 44px;
+  // line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -40,6 +43,7 @@
 }
 .heroList {
   @extend %section;
+  padding-bottom: 60px;
 }
 .heroListContainer {
   @extend %container;
@@ -54,6 +58,9 @@
 // .advantages__item:not(:first-child) {
 //   margin-left: 30px;
 // }
+.advantages__item:not(:last-child) {
+  margin-bottom: 30px;
+}
 .icon {
   height: 120px;
   margin-bottom: 30px;
@@ -86,6 +93,5 @@
   width: 450px;
 
   font-size: 14px;
-  line-height: 1.8;
-  text-align: center;
+  line-height: 1.71;
 }

@@ -1,12 +1,13 @@
 .filterResult {
   @extend %ul-item;
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
   margin: -15px;
   padding: 0;
 }
 .filterResult__item {
-  width: 370px;
+  // width: 370px;
+  width: 450px;
   margin: 15px;
   border: 1px solid #eeeeee;
 
@@ -33,6 +34,7 @@
 }
 .picture {
   display: flex;
+  width: 450px;
 }
 .filterResult__overlay {
   display: inline-block;

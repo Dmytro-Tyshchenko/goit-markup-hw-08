@@ -1,6 +1,8 @@
 .staff {
   @extend %section;
   background-color: #f5f4fa;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .staffContainer {
   @extend %container;
@@ -8,7 +10,8 @@
 .staff__title {
   @extend %h2, %main-font;
   padding: 0;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  margin-bottom: 30px;
 
   font-weight: 700;
   font-size: 36px;
@@ -34,6 +37,10 @@
 // .profile__card:not(:first-child) {
 //   margin-left: 30px;
 // }
+
+.profile__card:not(:last-child) {
+  margin-bottom: 30px;
+}
 .profile__pic {
   @extend %block;
   width: 450px;
@@ -41,7 +48,8 @@
 .profile__info {
   margin: 0;
   padding-top: 30px;
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 .profile__name {
   @extend %h3, %main-font;
