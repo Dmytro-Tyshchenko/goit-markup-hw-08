@@ -25,6 +25,12 @@
   margin: 0;
   padding: 0;
   // justify-content: space-evenly;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 .profile__card {
   background-color: #fff;
@@ -37,14 +43,28 @@
 // .profile__card:not(:first-child) {
 //   margin-left: 30px;
 // }
-
-.profile__card:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and(max-width: 767px) {
+  .profile__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .profile__card {
+    margin: 15px;
+  }
 }
 .profile__pic {
   @extend %block;
-  width: 450px;
+
+  @media screen and(max-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 354px;
+  }
 }
+
 .profile__info {
   margin: 0;
   padding-top: 30px;

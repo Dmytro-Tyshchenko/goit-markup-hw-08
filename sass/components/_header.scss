@@ -15,20 +15,24 @@
   @extend %container;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 // --------------------------------------------
 .logo {
   @extend %a-link, %logo-font;
-  // margin-right: 93px;
-  // margin-right: 276px;
+
   font-size: 24px;
   line-height: 1.16;
 
   color: $primary-text-color;
-
+  @media screen and (max-width: 767px) {
+    margin-right: 276px;
+  }
   @media screen and (min-width: 768px) {
     margin-right: 87px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
   }
 }
 .logo__accent-color {
@@ -160,6 +164,10 @@
   @media screen and (min-width: 768px) {
     padding: 47px 0;
   }
+  @media screen and (min-width: 1200px) {
+    padding: 37px 0;
+  }
+
   @media screen and (min-width: 768px) {
     &--current::after {
       content: '';
@@ -187,14 +195,14 @@
   margin: 0;
   // padding-left: 10px;
   @media screen and (max-width: 767px) {
-    margin-left: auto;
     margin-top: 302px;
-    margin-bottom: 0;
+    align-items: flex-start;
   }
 
-  // @media screen and (min-width: 768px) {
-  //   display: flex;
-  // }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 306px;
+  }
 
   transition-property: color;
   transition-duration: 250ms;
@@ -203,8 +211,7 @@
   .contact__link {
     @extend %a-link, %main-font;
     font-weight: 500;
-    // font-size: 14px;
-    // line-height: 1.14;
+
     letter-spacing: 0.02em;
 
     transition-property: color;
@@ -235,6 +242,11 @@
       line-height: 1.16;
       color: $paragraph-text-color;
     }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.14;
+      color: $paragraph-text-color;
+    }
   }
 }
 
@@ -247,19 +259,22 @@
     margin-top: 32px;
   }
 }
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .contact__item {
     margin-left: 85px;
     align-items: center;
   }
+}
+@media screen and (max-width: 1199px) {
   .contact__item:not(:last-child) {
     margin-bottom: 10px;
   }
 }
-// .contact__item:not(:first-child) {
-//   margin-left: 50px;
-// }
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:first-child) {
+    margin-left: 30px;
+  }
+}
 
 .contact__icon {
   width: 16px;
