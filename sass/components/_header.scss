@@ -1,29 +1,42 @@
 .header {
-  @extend %container;
   position: relative;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
+  }
+}
+// --------------------------------------------
+.headerContainer {
+  @extend %container;
   display: flex;
-  // align-items: center;
-  // padding: 32px 0;
-  padding-top: 16px;
-  padding-bottom: 16px;
   align-items: center;
+  justify-content: space-between;
 }
 // --------------------------------------------
 .logo {
   @extend %a-link, %logo-font;
   // margin-right: 93px;
-  margin-right: 276px;
+  // margin-right: 276px;
   font-size: 24px;
   line-height: 1.16;
 
   color: $primary-text-color;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 87px;
+  }
 }
 .logo__accent-color {
   color: $accent-color;
 }
 // ---------------------------------------------
 .buttonMobile {
-  // display: inline-flex;
+  display: inline-flex;
   padding: 0;
   margin: 0;
   border: none;
@@ -49,48 +62,73 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .iconMenu {
   display: none;
 }
 // ----------------------------------------------
+.navBox {
+  display: flex;
+  align-items: center;
+}
+// ----------------------------------------------
 .mobileMenu {
-  position: absolute;
-  display: none;
-  padding: 48px 40px;
-  margin: 0;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 796px;
-  background-color: $primary-white-color;
-  z-index: 999;
-
   &.is-open {
     display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    padding: 48px 40px;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 796px;
+    background-color: $primary-white-color;
+    z-index: 999;
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
 // ----------------------------------------------
 .navigation {
   @extend %ul-item;
-  // display: flex;
-  // justify-content: flex-start;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    // justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
 }
 .navigation__link {
   @extend %main-font;
   font-weight: 500;
-  // font-size: 14px;
-  // line-height: 1.14;
+
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
   &:hover,
   &:focus {
@@ -101,30 +139,41 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-// .navigation__item:not(:first-child) {
-//   margin-left: 50px;
-// }
-.navigation__item:not(:last-child) {
-  margin-bottom: 32px;
+@media screen and (max-width: 767px) {
+  .navigation__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .navigation__item:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
 .navigation__link {
   @extend %a-link;
   position: relative;
-  // padding: 40px 0;
+
   color: $primary-text-color;
 
-  // &--current::after {
-  //   content: '';
-  //   display: block;
-  //   position: absolute;
-  //   background-color: $accent-color;
-  //   width: 100%;
-  //   height: 4px;
-  //   border-radius: 4px;
-  //   bottom: 0;
-  //   right: 0;
-  //   opacity: 1;
-  // }
+  @media screen and (min-width: 768px) {
+    padding: 47px 0;
+  }
+  @media screen and (min-width: 768px) {
+    &--current::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: $accent-color;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      bottom: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
 
   &--currColor {
     color: $accent-color;
@@ -134,12 +183,18 @@
 // -------------------------------------------------------
 .contact {
   @extend %ul-item;
-  // display: flex;
-  margin-left: auto;
-  margin-top: 302px;
-  margin-bottom: 0;
   padding: 0;
+  margin: 0;
   // padding-left: 10px;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-top: 302px;
+    margin-bottom: 0;
+  }
+
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  // }
 
   transition-property: color;
   transition-duration: 250ms;
@@ -175,30 +230,60 @@
       font-size: 24px;
       line-height: 1.16;
     }
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+      line-height: 1.16;
+      color: $paragraph-text-color;
+    }
   }
 }
-.contact--direction {
-  display: inline-flex;
-  flex-direction: column-reverse;
+
+@media screen and (max-width: 767px) {
+  .contact--direction {
+    display: inline-flex;
+    flex-direction: column-reverse;
+  }
+  .contact__item:not(:last-child) {
+    margin-top: 32px;
+  }
 }
-.contact__item:not(:last-child) {
-  margin-top: 32px;
+
+@media screen and (min-width: 768px) {
+  .contact__item {
+    margin-left: 85px;
+    align-items: center;
+  }
+  .contact__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 // .contact__item:not(:first-child) {
 //   margin-left: 50px;
 // }
 
 .contact__icon {
-  display: none;
   width: 16px;
   height: 12px;
   margin: 0;
   margin-right: 10px;
   fill: currentColor;
+
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 14px;
+    height: 10px;
+  }
 }
 .contact__icon--size {
   width: 10px;
   height: 16px;
+
+  @media screen and (max-width: 1199px) {
+    width: 10px;
+    height: 14px;
+  }
 }
 // -----------------------------------
 .mobileNav {
@@ -208,6 +293,10 @@
   padding: 0;
   margin: 0;
   margin-top: 64px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .mobileNav__link {
   @extend %a-link, %main-font;

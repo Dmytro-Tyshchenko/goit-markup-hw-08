@@ -5,25 +5,32 @@
   background-position: center;
   background-size: cover;
 
-  // padding-top: 180px;
-  // padding-bottom: 220px;
   padding: 118px 60px;
   text-align: center;
   background-color: #2f303a;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 180px;
+    padding-bottom: 220px;
+  }
 }
 .hero__title {
   @extend %h1, %main-font;
   margin-bottom: 30px;
 
   font-weight: 900;
-  // font-size: 44px;
-  // line-height: 1.36;
+
   font-size: 26px;
   line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $primary-white-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 .button {
   padding: 10px 32px;
@@ -43,24 +50,35 @@
 }
 .heroList {
   @extend %section;
-  padding-bottom: 60px;
+  // padding-bottom: 60px;
 }
 .heroListContainer {
   @extend %container;
 }
 .advantages {
   @extend %ul-item;
-  // display: flex;
+  // justify-content: space-evenly;
   margin: 0;
   padding: 0;
-  // justify-content: space-evenly;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+.advantages__item {
+  margin: 15px;
 }
 // .advantages__item:not(:first-child) {
 //   margin-left: 30px;
 // }
-.advantages__item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .advantages__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
+
 .icon {
   height: 120px;
   margin-bottom: 30px;
@@ -68,8 +86,15 @@
   border-radius: 4px;
   justify-content: center;
 
-  &__svg {
-    width: 450px;
+  @media screen and (max-width: 767px) {
+    .icon__svg {
+      width: 450px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    &__svg {
+      width: 354px;
+    }
   }
 }
 .visuallyHidden {
@@ -90,8 +115,9 @@
   margin-top: 0;
   margin-bottom: 0;
   // width: 270px;
-  width: 450px;
-
+  @media screen and (max-width: 767px) {
+    width: 450px;
+  }
   font-size: 14px;
   line-height: 1.71;
 }
