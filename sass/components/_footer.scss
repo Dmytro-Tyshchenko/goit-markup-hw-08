@@ -6,9 +6,11 @@
   @extend %container;
 }
 .footerBlock {
-  // display: flex;
   margin: 0;
   padding: 0;
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  // }
 }
 .footerLogo {
   margin-bottom: 20px;
@@ -23,6 +25,20 @@
 }
 .footerLogo__reverse-color {
   color: $primary-white-color;
+}
+// ---------------------------------------
+.footerBlock__tablet {
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+    padding-left: 76px;
+  }
+}
+// ---------------------------------------
+.footerbox__tablet {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-bottom: 60px;
+  }
 }
 // ---------------------------------------
 .address {
@@ -70,11 +86,18 @@
 }
 
 // -------------------------------
-// .joint {
-//   margin-left: 70px;
-// }
+.joint {
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+}
 .joint__title {
   @extend %h3, %main-font;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -82,8 +105,6 @@
   text-align: center;
 
   color: #ffffff;
-  margin-top: 60px;
-  margin-bottom: 20px;
 }
 .footerNav {
   @extend %ul-item;
@@ -126,9 +147,13 @@
   fill: currentColor;
 }
 // -------------------------------
-// .footerForm {
-//   // margin-left: 88px;
-// }
+
+.footerForm {
+  @media screen and (min-width: 1200px) {
+    margin-left: 88px;
+  }
+}
+
 .footerLabel {
   @extend %main-font;
   display: flex;
@@ -141,8 +166,19 @@
 
   color: $primary-white-color;
 }
+//---------------------------------------------
+.footerInputBox {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+// --------------------------------------------
 .footerInput {
-  // min-width: 358px;
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+  }
+
   min-width: 450px;
   height: 50px;
   padding-left: 16px;

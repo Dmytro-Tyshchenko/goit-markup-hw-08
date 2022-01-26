@@ -198,6 +198,9 @@
     margin-top: 302px;
     align-items: flex-start;
   }
+  @media screen and (min-width: 768px) {
+    margin-left: 84px;
+  }
 
   @media screen and (min-width: 1200px) {
     display: flex;

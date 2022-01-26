@@ -1,13 +1,23 @@
 .filterResult {
   @extend %ul-item;
-  // display: flex;
-  // flex-wrap: wrap;
+
   margin: -15px;
   padding: 0;
+
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .filterResult__item {
-  // width: 370px;
   width: 450px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
   margin: 15px;
   border: 1px solid #eeeeee;
 
@@ -35,6 +45,13 @@
 .picture {
   display: flex;
   width: 450px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
 }
 .filterResult__overlay {
   display: inline-block;

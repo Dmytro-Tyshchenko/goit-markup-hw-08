@@ -1,7 +1,11 @@
 .portfolio {
   @extend %section;
   border-top: 1px solid #eeeeee;
-  margin-bottom: 60px;
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
 }
 .portfolioContainer {
   @extend %container;
@@ -9,17 +13,25 @@
 .buttonList {
   @extend %ul-item;
   display: flex;
-  // justify-content: center;
+
   flex-wrap: wrap;
 
   margin-top: 0;
   // margin-bottom: 50px;
   margin-bottom: 40px;
   padding-left: 0;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
-// .buttonList__item:not(:first-child) {
-//   margin-left: 8px;
-// }
+@media screen and (min-width: 1200px) {
+  .buttonList__item:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
 .buttonList__item {
   margin-right: 8px;
   margin-bottom: 15px;

@@ -4,14 +4,18 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.staffContainer {
-  @extend %container;
-}
+// .staffContainer {
+//   @extend %container;
+// }
 .staff__title {
   @extend %h2, %main-font;
   padding: 0;
-  // margin-bottom: 50px;
+
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 
   font-weight: 700;
   font-size: 36px;
@@ -21,15 +25,16 @@
 // -----------------------------------------
 .profile {
   @extend %ul-item;
-  // display: flex;
   margin: 0;
   padding: 0;
-  // justify-content: space-evenly;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: space-evenly;
   }
 }
 .profile__card {
@@ -40,9 +45,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-// .profile__card:not(:first-child) {
-//   margin-left: 30px;
-// }
+.profile__card:not(:first-child) {
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
+}
+
 @media screen and(max-width: 767px) {
   .profile__card:not(:last-child) {
     margin-bottom: 30px;
@@ -56,12 +64,14 @@
 .profile__pic {
   @extend %block;
 
-  @media screen and(max-width: 767px) {
+  @media screen and(min-width: 480px) {
     width: 450px;
   }
-
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
   }
 }
 
