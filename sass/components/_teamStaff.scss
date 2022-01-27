@@ -41,6 +41,11 @@
     padding: 0;
   }
 }
+.profile .profile__card {
+  @media screen and (max-width: 1199px) {
+    margin: 15px;
+  }
+}
 .profile__card {
   background-color: #fff;
   margin: 0;

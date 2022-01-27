@@ -46,6 +46,8 @@
 .headerContainer, .heroListContainer, .servicesContainer, .staffContainer, .clientsContainer, .footerContainer, .portfolioContainer {
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -526,8 +528,8 @@
 }
 
 .hero {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/hero-img.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-img.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -605,6 +607,12 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .advantages .advantages__item {
+    margin: 15px;
   }
 }
 
@@ -784,6 +792,12 @@
     display: flex;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .profile .profile__card {
+    margin: 15px;
   }
 }
 
@@ -1034,9 +1048,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .footerLogo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footerLogo__accent-color {
@@ -1047,15 +1066,8 @@
   color: white;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footerBlock__left {
-    margin-right: 165px;
-    padding-left: 76px;
-  }
-}
-
 @media screen and (min-width: 768px) {
-  .footerbox__tablet {
+  .footerLogoAddJoint {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1063,8 +1075,8 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footerbox__tablet {
-    margin-bottom: 60px;
+  .footerLogoAddJoint {
+    padding-left: 76px;
   }
 }
 
@@ -1074,13 +1086,23 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
-  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .address {
+    text-align: center;
+  }
 }
 
 .address__paragraph {
   margin-top: 0;
   margin-bottom: 8px;
-  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .address__paragraph {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1122,6 +1144,12 @@
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .joint {
+    margin-left: 165px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1197,9 +1225,15 @@
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footerForm {
+    margin-top: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footerForm {
-    margin-left: 88px;
+    margin: 0;
   }
 }
 
@@ -1239,7 +1273,6 @@
   height: 50px;
   padding-left: 16px;
   margin: 0;
-  margin-bottom: 20px;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1248,10 +1281,23 @@
   background-color: transparent;
 }
 
+@media screen and (max-width: 1199px) {
+  .footerInput {
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footerInput {
     min-width: 358px;
   }
+}
+
+.footerBtnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 400px;
 }
 
 .footerButton {
@@ -1284,7 +1330,9 @@
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    margin-left: 12px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

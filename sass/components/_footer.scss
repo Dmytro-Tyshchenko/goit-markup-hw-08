@@ -15,7 +15,10 @@
 .footerLogo {
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
+
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
 }
 .footerLogo__link {
   @extend %a-link, %logo-font;
@@ -27,25 +30,15 @@
   color: $primary-white-color;
 }
 // ---------------------------------------
-.footerBlock__left {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-right: 165px;
-    padding-left: 76px;
-  }
-  // @media screen and (min-width: 1200px) {
-  //   flex-grow: 1;
-  //   padding-left: 200px;
-  // }
-}
-// ---------------------------------------
-.footerbox__tablet {
+.footerLogoAddJoint {
   @media screen and (min-width: 768px) {
     display: flex;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-bottom: 60px;
+    padding-left: 76px;
   }
 }
+// ---------------------------------------
 // ---------------------------------------
 .address {
   @extend %main-font;
@@ -55,16 +48,21 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
-  text-align: center;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 .address__paragraph {
   margin-top: 0;
 
   margin-bottom: 8px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
   @media screen and (min-width: 1200px) {
     margin-bottom: 9px;
   }
-  text-align: center;
 }
 .footerContact {
   @extend %ul-item;
@@ -98,6 +96,10 @@
 
 // -------------------------------
 .joint {
+  @media screen and (min-width: 768px) {
+    margin-left: 165px;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
   }
@@ -159,8 +161,13 @@
 // -------------------------------
 
 .footerForm {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+
   @media screen and (min-width: 1200px) {
-    margin-left: 88px;
+    // margin-left: 88px;
+    margin: 0;
   }
 }
 
@@ -192,17 +199,22 @@
   height: 50px;
   padding-left: 16px;
   margin: 0;
-  margin-bottom: 20px;
-  color: $primary-white-color;
-
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
   @media screen and (min-width: 1200px) {
     min-width: 358px;
   }
-
+  color: $primary-white-color;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
+}
+
+.footerBtnBox {
+  display: flex;
+  padding-left: 400px;
 }
 .footerButton {
   display: flex;
@@ -210,7 +222,8 @@
   justify-content: center;
   @media screen and (min-width: 1200px) {
     display: inline-flex;
-    margin-left: 12px;
+    // margin-left: 12px;
+    align-items: center;
   }
 
   padding-top: 10px;
