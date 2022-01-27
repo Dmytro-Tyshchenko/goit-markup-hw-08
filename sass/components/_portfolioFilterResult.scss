@@ -9,6 +9,7 @@
     flex-wrap: wrap;
   }
 }
+
 .filterResult__item {
   width: 450px;
 
@@ -95,6 +96,11 @@
 .filterResult__card {
   padding: 20px 24px;
 }
+.filterResult__card--padding {
+  @media screen and (min-width: 768px) {
+    padding-bottom: 54px;
+  }
+}
 .filterResult__title {
   @extend %h2, %main-font;
   margin-bottom: 4px;
@@ -110,5 +116,5 @@
 
   color: $paragraph-text-color;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.87;
 }

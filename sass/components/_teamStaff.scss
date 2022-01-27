@@ -1,16 +1,17 @@
 .staff {
   @extend %section;
   background-color: #f5f4fa;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @media screen and(max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
-// .staffContainer {
-//   @extend %container;
-// }
+.staffContainer {
+  @extend %container;
+}
 .staff__title {
   @extend %h2, %main-font;
   padding: 0;
-
   margin-bottom: 30px;
 
   @media screen and (min-width: 1200px) {
@@ -35,6 +36,9 @@
   }
   @media screen and (min-width: 1200px) {
     justify-content: space-evenly;
+    display: flex;
+    margin: 0;
+    padding: 0;
   }
 }
 .profile__card {
@@ -45,20 +49,14 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.profile__card:not(:first-child) {
-  @media screen and (min-width: 1200px) {
-    margin-left: 30px;
-  }
-}
-
-@media screen and(max-width: 767px) {
-  .profile__card:not(:last-child) {
+.profile__card:not(:last-child) {
+  @media screen and(max-width: 767px) {
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 1199px) {
-  .profile__card {
-    margin: 15px;
+.profile__card:not(:first-child) {
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
   }
 }
 .profile__pic {
@@ -78,8 +76,10 @@
 .profile__info {
   margin: 0;
   padding-top: 30px;
-  // padding-bottom: 30px;
   padding-bottom: 24px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 }
 .profile__name {
   @extend %h3, %main-font;

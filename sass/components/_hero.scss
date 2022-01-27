@@ -1,6 +1,12 @@
 .hero {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/hero-img.jpg');
+    url('../images/hero-pic-mobile.jpg');
+
+  // @media screen and (min-width: 768px) {
+  //   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  //     url('../images/hero-pic-tablet.jpg');
+  // }
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -14,6 +20,28 @@
     padding-bottom: 220px;
   }
 }
+// @media (min-device-pixel-ratio: 2),
+//   (-webkit-min-device-pixel-ratio: 2),
+//   (min-resolution: 192dpi),
+//   (min-resolution: 2dppx) {
+//   .hero {
+//     @media screen and (min-width: 480px) {
+//       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//         url('../images/hero-pic-mobile@2x.jpg');
+//     }
+//   }
+// }
+// @media (min-device-pixel-ratio: 2),
+//   (-webkit-min-device-pixel-ratio: 2),
+//   (min-resolution: 192dpi),
+//   (min-resolution: 2dppx) {
+//   .hero {
+//     @media screen and (min-width: 768px) {
+//       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+//         url('../images/hero-pic-tablet@2x.jpg');
+//     }
+//   }
+// }
 .hero__title {
   @extend %h1, %main-font;
   margin-bottom: 30px;
@@ -50,14 +78,17 @@
 }
 .heroList {
   @extend %section;
-  // padding-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .heroListContainer {
   @extend %container;
 }
 .advantages {
   @extend %ul-item;
-  // justify-content: space-evenly;
+
   margin: 0;
   padding: 0;
 
@@ -66,19 +97,19 @@
     flex-wrap: wrap;
     margin: -15px;
   }
+  @media screen and (min-width: 1200px) {
+    justify-content: space-evenly;
+    margin: 0;
+  }
 }
-@media screen and (max-width: 767px) {
-  .advantages__item:not(:last-child) {
+.advantages__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 1199px) {
-  .advantages__item {
-    margin: 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .advantages__item:not(:first-child) {
+
+.advantages__item:not(:first-child) {
+  @media screen and (min-width: 1200px) {
     margin-left: 30px;
   }
 }
