@@ -149,17 +149,23 @@
             <ul class="variation">
                 <li class="variation__item"> 
                     <div class="frontTextBlock">
-                    <img src="./images/img1.jpg" alt="печатанье текста на компютере" width="370">
+                    <img
+                    srcset="./images/img1-370.jpg 1x, ./images/img1@2.jpg 2x"
+                     src="./images/img1-370.jpg" alt="печатанье текста на компютере" width="370">
                     <p class="variation__paragraph">Десктопные приложения</p>
                 </div>
                 </li>               
                 <li class="variation__item"> 
                     <div class="frontTextBlock">
-                    <img src="./images/img2.jpg" alt="работа за компютером" width="370"> <p class="variation__paragraph">Мобильные приложения</p></div>
+                    <img 
+                    srcset="./images/img2-370.jpg 1x, ./images/img2@2.jpg 2x"
+                    src="./images/img2-370.jpg" alt="работа за компютером" width="370"> <p class="variation__paragraph">Мобильные приложения</p></div>
                 </li>
                 <li class="variation__item"> 
                     <div class="frontTextBlock">
-                    <img src="./images/img3.jpg" alt="работа на планшете" width="370"> <p class="variation__paragraph">Дизайнерские решения</p> </div>
+                    <img 
+                    srcset="./images/img3-370.jpg 1x, ./images/img3@2.jpg 2x"
+                    src="./images/img3-370.jpg" alt="работа на планшете" width="370"> <p class="variation__paragraph">Дизайнерские решения</p> </div>
                 </li>
             </ul>
             </div>
@@ -173,7 +179,16 @@
     <h2 class="staff__title">Наша команда</h2>
     <ul class="profile">
     <li class="profile__card">
-    <img class="profile__pic" src="./images/img4.jpg" alt="фотография работника компании" width="270">
+    <img class="profile__pic"
+    srcset="
+            ./images/img4-450.jpg  450w,
+            ./images/img4-900.jpg  900w
+            "
+    src="./images/img4-450.jpg" 
+    alt="фотография работника компании" 
+    sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+    width="270"
+    >
     <div class="profile__info">
         <h3 class="profile__name">Игорь Демьяненко</h3>
         <p class="profile__job">Product Designer</p>
@@ -220,7 +235,15 @@
     </li>
                                 
     <li class="profile__card">
-    <img class="profile__pic" src="./images/img5.jpg" alt="фотография работника компании" width="270">
+    <img class="profile__pic"
+       srcset="
+            ./images/img5-450.jpg  450w,
+            ./images/img5-900.jpg  900w
+            "
+    src="./images/img5-450.jpg" 
+    alt="фотография работника компании" 
+    sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+    width="270">
         <div class="profile__info">
         <h3 class="profile__name">Ольга Репина</h3>
         <p class="profile__job">Frontend Developer</p>
@@ -266,7 +289,15 @@
     </div>
     </li>
     <li class="profile__card">
-        <img class="profile__pic" src="./images/img6.jpg" alt="фотография работника компании" width="270">
+        <img class="profile__pic"
+           srcset="
+            ./images/img6-450.jpg  450w,
+            ./images/img6-900.jpg  900w
+            "
+    src="./images/img6-450.jpg" 
+    alt="фотография работника компании" 
+    sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+    width="270">
         <div class="profile__info">
         <h3 class="profile__name">Николай Тарасов</h3>
         <p class="profile__job">Marketing</p>
@@ -309,7 +340,15 @@
     </div>
     </li>
     <li class="profile__card">
-    <img class="profile__pic" src="./images/img7.jpg" alt="фотография работника компании" width="270">
+    <img class="profile__pic" 
+      srcset="
+            ./images/img7-450.jpg  450w,
+            ./images/img7-900.jpg  900w
+            "
+    src="./images/img7-450.jpg" 
+    alt="фотография работника компании" 
+    sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+    width="270">
     <div class="profile__info">
     <h3 class="profile__name">Михаил Ермаков</h3>
     <p class="profile__job">UI Designer</p>
@@ -404,13 +443,14 @@
         </section>
     </main>
 <!--------------------------------------- FOOTER -->
-    <footer class="footer">
-        <div class="footerContainer">
-            <div class="footerBlock">
-                <div class="footerLogoAddJoint">
-                    <div>
+<footer class="footer">
+    <div class="footerContainer">
+        <div class="footerBlock">
+            <div class="footerLogoAddJoint">
+                <div>
                     <div class="footerLogo">
-                        <a href="index.html" class="footerLogo__link"><span class="footerLogo__accent-color">Web</span><span
+                        <a href="index.html" class="footerLogo__link"><span
+                                class="footerLogo__accent-color">Web</span><span
                                 class="footerLogo__reverse-color">Studio</span></a>
                     </div>
                     <address class="address">
@@ -424,66 +464,68 @@
                             </li>
                         </ul>
                     </address>
-                    </div>
-                    <div class="joint">
-                        <h3 class="joint__title">присоединяйтесь</h3>
-                        <ul class="footerNav">
-                            <li class="footerNav__item">
-                                <a class="footerNav__link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                                    <svg class="footerNav__icon" width="20" height="20">
-                                        <use href="./images/icons.svg#icon-instagram" width="20" height="20">
-                                        </use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footerNav__item">
-                                <a class="footerNav__link" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                                    <svg class="footerNav__icon" width="20" height="20">
-                                        <use href="./images/icons.svg#icon-twitter" width="20" height="20">
-                                        </use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footerNav__item">
-                                <a class="footerNav__link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                                    <svg class="footerNav__icon" width="20" height="20">
-                                        <use href="./images/icons.svg#icon-facebook" width="20" height="20">
-                                        </use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footerNav__item">
-                                <a class="footerNav__link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                                    <svg class="footerNav__icon" width="20" height="20">
-                                        <use href="./images/icons.svg#icon-linkedin" width="20" height="20">
-                                        </use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    </div>
+                </div>
 
-
-                <form class="footerForm">
-                    <label class="footerLabel" for="footer-form"> Подпишитесь на рассылку
-                    </label>
-                    <div class="footerInputBox">
-                        <input class="footerInput" type="text" name="email" placeholder="E-mail" id="footer-form">
-                    </div>
-                    <div class="footerBtnBox">
-<button class="footerButton" type="submit">
-    Подписаться<svg class="footerButton__icon" width="24" height="24">
-        <use href="./images/icons.svg#icon-icon-send"></use>
-    </svg>
-</button>
-                    </div>
-                   
-                </form>
-
+                <div class="joint">
+                    <h3 class="joint__title">присоединяйтесь</h3>
+                    <ul class="footerNav">
+                        <li class="footerNav__item">
+                            <a class="footerNav__link" href="https://www.instagram.com" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg class="footerNav__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-instagram" width="20" height="20">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footerNav__item">
+                            <a class="footerNav__link" href="https://www.twitter.com" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg class="footerNav__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-twitter" width="20" height="20">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footerNav__item">
+                            <a class="footerNav__link" href="https://www.facebook.com" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg class="footerNav__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-facebook" width="20" height="20">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footerNav__item">
+                            <a class="footerNav__link" href="https://www.linkedin.com" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg class="footerNav__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-linkedin" width="20" height="20">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
+            <form class="footerForm">
+
+                <label class="footerLabel" for="footer-form"> Подпишитесь на рассылку
+                </label>
+                <input class="footerInput" type="text" name="email" placeholder="E-mail" id="footer-form">
+
+
+                <button class="footerButton" type="submit">
+                    Подписаться<svg class="footerButton__icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-icon-send"></use>
+                    </svg>
+                </button>
+
+            </form>
         </div>
-    </footer>
+    </div>
+</footer>
     <!----------------------------------------------- MODAL WINDOW -->
     <div data-modal class="backdrop is-hidden">
         <div class="modal">

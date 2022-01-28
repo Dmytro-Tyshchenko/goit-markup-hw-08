@@ -97,7 +97,7 @@
   padding: 20px 24px;
 }
 .filterResult__card--padding {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding-bottom: 54px;
   }
 }

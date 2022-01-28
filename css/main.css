@@ -528,8 +528,8 @@
 }
 
 .hero {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/hero-img.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-img.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1233,7 +1233,7 @@
 
 @media screen and (min-width: 1200px) {
   .footerForm {
-    margin: 0;
+    margin-left: 88px;
   }
 }
 
@@ -1283,7 +1283,13 @@
 
 @media screen and (max-width: 1199px) {
   .footerInput {
-    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
   }
 }
 
@@ -1293,21 +1299,14 @@
   }
 }
 
-.footerBtnBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 400px;
-}
-
 .footerButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
   padding-top: 10px;
   padding-left: 29px;
   padding-right: 28px;
@@ -1325,14 +1324,18 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1199px) {
+  .footerButton {
+    margin-top: 20px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footerButton {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin-left: 12px;
   }
 }
 
@@ -1787,7 +1790,7 @@
   padding: 20px 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .filterResult__card--padding {
     padding-bottom: 54px;
   }
