@@ -1,33 +1,36 @@
 .filterResult {
   @extend %ul-item;
-
-  margin: -15px;
+  margin: 0;
   padding: 0;
 
   @media screen and(min-width:768px) {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
 .filterResult__item {
   width: 450px;
-
+  margin: 0;
+  padding: 0;
   @media screen and (min-width: 768px) {
     width: 354px;
   }
   @media screen and (min-width: 1200px) {
     width: 370px;
   }
-  margin: 15px;
+
   border: 1px solid #eeeeee;
 
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  .filterResult & {
-    margin: 15px;
+  @media screen and (min-width: 768px) {
+    .filterResult & {
+      margin: 15px;
+    }
   }
 
   &:hover {
@@ -39,6 +42,12 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+.filterResult__item:not(:last-child) {
+  @media screen and(max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+
 .filterResult__box {
   position: relative;
   overflow: hidden;
