@@ -734,7 +734,7 @@
   text-align: center;
 }
 
-@media screen and (min-width: 1200pxpx) {
+@media screen and (min-width: 1200px) {
   .services__title {
     font-size: 36px;
     line-height: 1.16;
@@ -810,7 +810,7 @@
   }
 }
 
-@media screen and (min-width: 1200pxpx) {
+@media screen and (min-width: 1200px) {
   .staff__title {
     font-size: 36px;
     line-height: 1.16;
@@ -991,7 +991,7 @@
   }
 }
 
-@media screen and (min-width: 1200pxpx) {
+@media screen and (min-width: 1200px) {
   .clients__title {
     font-size: 36px;
     line-height: 1.16;
@@ -1222,13 +1222,13 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: center;
   color: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
   .joint__title {
     margin-top: 60px;
+    text-align: center;
   }
 }
 
@@ -1672,28 +1672,21 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .buttonList {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin-bottom: 50px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .buttonList__item:not(:first-child) {
-    margin-left: 8px;
+@media screen and (max-width: 767px) {
+  .buttonList__item {
+    margin-right: 8px;
+    margin-bottom: 15px;
   }
 }
 
-.buttonList__item {
-  margin-right: 8px;
-  margin-bottom: 15px;
+@media screen and (min-width: 768px) {
+  .buttonList__item:not(:first-child) {
+    margin-left: 8px;
+  }
 }
 
 .buttonList__btn {

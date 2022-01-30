@@ -110,14 +110,17 @@
 
   @media screen and (max-width: 767px) {
     margin-top: 60px;
+    text-align: center;
   }
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: center;
 
   color: #ffffff;
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 .footerNav {
   @extend %ul-item;
