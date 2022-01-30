@@ -87,8 +87,10 @@
 //   display: none;
 // }
 // ----------------------------------------------
-.buttonMobile--position {
+.modalMenuContainer .buttonMobile--position {
   padding: 10px 15px 0 385px;
+  position: fixed;
+  right: 0;
 }
 
 .navBox {
@@ -96,7 +98,18 @@
   align-items: center;
 }
 // ----------------------------------------------
-
+.modalMenuContainer {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    display: block;
+    padding-left: 40px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
+    height: 796px;
+  }
+}
 // ----------------------------------------------
 .mobileMenu {
   @media screen and (max-width: 767px) {
@@ -105,13 +118,13 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding-left: 40px;
-    padding-right: 15px;
+    // padding-left: 40px;
+    // padding-right: 15px;
     margin: 0;
     background-color: $primary-white-color;
     z-index: 999;
 
-    transform: translateY(-100%);
+    transform: translateX(100%);
     transition: transform 250ms ease-in-out;
   }
   @media screen and (min-width: 768px) {
@@ -120,15 +133,16 @@
 }
 
 .mobileMenu.is-open {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 // ----------------------------------------------
 .navigation {
   @extend %ul-item;
   @media screen and (max-width: 767px) {
     padding: 0;
+    padding-top: 48px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 302px;
   }
 
   transition-property: color;
@@ -217,7 +231,8 @@
   margin: 0;
   // padding-left: 10px;
   @media screen and (max-width: 767px) {
-    margin-top: 302px;
+    position: fixed;
+    bottom: 134px;
   }
   @media screen and (min-width: 768px) {
     margin-left: 84px;
@@ -322,6 +337,8 @@
 // -----------------------------------
 .mobileNav {
   @extend %ul-item;
+  position: fixed;
+  bottom: 0;
   display: flex;
   align-items: center;
   padding: 0;
@@ -333,6 +350,7 @@
     display: none;
   }
 }
+
 .mobileNav__link {
   @extend %a-link, %main-font;
   color: $accent-color;

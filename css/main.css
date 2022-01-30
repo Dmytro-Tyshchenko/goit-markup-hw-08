@@ -205,8 +205,10 @@
   }
 }
 
-.buttonMobile--position {
+.modalMenuContainer .buttonMobile--position {
   padding: 10px 15px 0 385px;
+  position: fixed;
+  right: 0;
 }
 
 .navBox {
@@ -218,6 +220,24 @@
           align-items: center;
 }
 
+.modalMenuContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .modalMenuContainer {
+    display: block;
+    padding-left: 40px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
+    height: 796px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .mobileMenu {
     position: fixed;
@@ -225,13 +245,11 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding-left: 40px;
-    padding-right: 15px;
     margin: 0;
     background-color: white;
     z-index: 999;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
     -webkit-transition: -webkit-transform 250ms ease-in-out;
     transition: -webkit-transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out;
@@ -248,8 +266,8 @@
 }
 
 .mobileMenu.is-open {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .navigation {
@@ -264,8 +282,9 @@
 @media screen and (max-width: 767px) {
   .navigation {
     padding: 0;
+    padding-top: 48px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 302px;
   }
 }
 
@@ -364,7 +383,8 @@
 
 @media screen and (max-width: 767px) {
   .contact {
-    margin-top: 302px;
+    position: fixed;
+    bottom: 134px;
   }
 }
 
@@ -492,6 +512,8 @@
 }
 
 .mobileNav {
+  position: fixed;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
