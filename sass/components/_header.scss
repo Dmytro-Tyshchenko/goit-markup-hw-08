@@ -202,6 +202,12 @@
 }
 
 // -------------------------------------------------------
+.contactBlock {
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    bottom: 0;
+  }
+}
 
 .contact {
   @extend %ul-item;
