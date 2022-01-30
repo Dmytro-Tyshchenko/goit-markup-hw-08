@@ -24,13 +24,21 @@
 <a href="index.html" class="logo"> <span class="logo__accent-color">Web</span>Studio</a>
             </div>
 
-<button type="button" class="buttonMobile is-open" data-menu-button>
+<button   type="button"
+ class="buttonMobile js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
     <svg width="40" height="40" aria-label="переключатель мобильного меню">
-        <use class="iconCross" href="./images/icons.svg#icon-close_40px"></use>
         <use class="iconMenu" href="./images/icons.svg#icon-menu_40px"></use>
     </svg>
 </button>
-<div class="mobileMenu" data-menu>
+<div class="mobileMenu js-menu-container" id="mobile-menu">
+    <button type="button " class="buttonMobile buttonMobile--position js-close-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="40" height="40" aria-label="переключатель мобильного меню">
+            <use class="iconCross" href="./images/icons.svg#icon-close_40px"></use>
+        </svg>
+    </button>
+    
     <nav class="navBox">
         <ul class="navigation">
             <li class="navigation__item">
@@ -584,7 +592,10 @@
         </div>
     </div>
 <script src="./js/modal.js"></script>
-<script src="./js/mobile-menu.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+<script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -63,12 +63,12 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &.is-open .iconMenu {
-    display: block;
-  }
-  &.is-open .iconCross {
-    display: none;
-  }
+  // &.is-open .iconMenu {
+  //   display: block;
+  // }
+  // &.is-open .iconCross {
+  //   display: none;
+  // }
 
   &:hover,
   &:focus {
@@ -83,37 +83,45 @@
     display: none;
   }
 }
-.iconMenu {
-  display: none;
-}
+// .iconMenu {
+//   display: none;
+// }
 // ----------------------------------------------
+.buttonMobile--position {
+  padding: 10px 15px 0 410px;
+}
+
 .navBox {
   display: flex;
   align-items: center;
 }
 // ----------------------------------------------
 .mobileMenu {
-  &.is-open {
-    display: block;
-  }
+  // &.is-open {
+  //   display: block;
+  // }
 
   @media screen and (max-width: 767px) {
-    position: absolute;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin: 0;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 736px;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 40px;
+    margin: 0;
     background-color: $primary-white-color;
     z-index: 999;
-    display: none;
-    overflow: scroll;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
   }
   @media screen and (min-width: 768px) {
     display: flex;
   }
+}
+
+.mobileMenu.is-open {
+  transform: translateX(0);
 }
 // ----------------------------------------------
 .navigation {
