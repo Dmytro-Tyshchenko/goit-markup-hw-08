@@ -18,6 +18,7 @@
   @extend %container;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 // --------------------------------------------
 .logoBox {
@@ -36,7 +37,7 @@
 
   color: $primary-text-color;
   @media screen and (max-width: 767px) {
-    margin-right: 276px;
+    // margin-right: 276px;
   }
 
   @media screen and (min-width: 768px) {
@@ -202,12 +203,6 @@
 }
 
 // -------------------------------------------------------
-.contactBlock {
-  @media screen and (max-width: 767px) {
-    position: fixed;
-    bottom: 0;
-  }
-}
 
 .contact {
   @extend %ul-item;
