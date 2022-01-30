@@ -88,7 +88,7 @@
 // }
 // ----------------------------------------------
 .buttonMobile--position {
-  padding: 10px 15px 0 410px;
+  padding: 10px 15px 0 385px;
 }
 
 .navBox {
@@ -97,10 +97,6 @@
 }
 // ----------------------------------------------
 .mobileMenu {
-  // &.is-open {
-  //   display: block;
-  // }
-
   @media screen and (max-width: 767px) {
     position: fixed;
     top: 0;
@@ -108,6 +104,7 @@
     width: 100vw;
     height: 100vh;
     padding-left: 40px;
+    padding-right: 15px;
     margin: 0;
     background-color: $primary-white-color;
     z-index: 999;
