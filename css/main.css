@@ -712,7 +712,7 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .advantages__title {
     text-align: center;
   }
@@ -893,6 +893,10 @@
   .profile__card:not(:first-child) {
     margin-left: 30px;
   }
+}
+
+.profile__pic {
+  min-width: 270px;
 }
 
 @media screen and (min-width: 480px) {
