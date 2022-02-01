@@ -199,7 +199,10 @@
 }
 // --------------------------------------------
 .footerInput {
-  min-width: 358px;
+  width: 358px;
+  @media screen and (max-width: 479px) {
+    width: 93.75vw;
+  }
   height: 50px;
   padding-left: 16px;
   margin: 0;

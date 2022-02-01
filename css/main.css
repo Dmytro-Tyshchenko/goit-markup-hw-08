@@ -233,8 +233,8 @@
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 480px;
-    height: 796px;
+    width: 100vw;
+    height: 100vh;
   }
 }
 
@@ -248,8 +248,8 @@
     margin: 0;
     background-color: white;
     z-index: 999;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
     -webkit-transition: -webkit-transform 250ms ease-in-out;
     transition: -webkit-transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out;
@@ -266,8 +266,8 @@
 }
 
 .mobileMenu.is-open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .navigation {
@@ -284,7 +284,7 @@
     padding: 0;
     padding-top: 48px;
     margin-top: 0;
-    margin-bottom: 302px;
+    margin-bottom: 37.94vh;
   }
 }
 
@@ -521,9 +521,9 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
-  padding-bottom: 48px;
+  padding-bottom: 6.04vh;
   margin: 0;
-  margin-top: 64px;
+  margin-top: 8.05vh;
 }
 
 @media screen and (min-width: 768px) {
@@ -721,20 +721,25 @@
 .advantages__paragraph {
   margin-top: 0;
   margin-bottom: 0;
-  width: 270px;
   font-size: 14px;
   line-height: 1.71;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .advantages__paragraph {
     width: 450px;
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .advantages__paragraph {
     width: 354px;
+  }
+}
+
+@media screen and (max-width: 478px), (min-width: 1200px) {
+  .advantages__paragraph {
+    width: 270px;
   }
 }
 
@@ -1353,7 +1358,7 @@
 }
 
 .footerInput {
-  min-width: 358px;
+  width: 358px;
   height: 50px;
   padding-left: 16px;
   margin: 0;
@@ -1363,6 +1368,12 @@
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
+}
+
+@media screen and (max-width: 479px) {
+  .footerInput {
+    width: 93.75vw;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1449,12 +1460,28 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 450px;
-  height: 609px;
+  width: 90vw;
+  height: 100vh;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 470px) {
+  .modal {
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1506,7 +1533,7 @@
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1, 5;
+  line-height: 1.5;
   text-align: center;
 }
 
