@@ -9,10 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"/>
-    <link rel="stylesheet" href="./css/style.css">
+    
     <title>Portfolio</title>
 </head>
 
@@ -130,11 +129,18 @@
             <li class="filterResult__item">
                 <a href="" class="filterResult__link">
                     <div class="filterResult__box">
-                        <img class="picture" srcset="
-                                                        ./images-portfolio/img1-450.jpg  450w,
-                                                        ./images-portfolio/img1-900.jpg  900w
-                                                        " src="./images-portfolio/img1-450.jpg" alt="ноутбук транслирует сайт"
-                            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw" width="370">
+<picture>
+    <source srcset="./images-portfolio/img1Desk-370.jpg  1x, 
+                            ./images-portfolio/img1Desk-740@2x.jpg 2x" media="(min-width: 1200px)">
+   
+    <source srcset="./images-portfolio/img1Tab-354.jpg  1x, 
+                        ./images-portfolio/img1Tab-708@2x.jpg 2x" 
+                        media="(min-width: 768px)">
+    <source srcset="./images-portfolio/img1Mobile-450.jpg  1x, 
+                        ./images-portfolio/img1Mobile-900@2x.jpg 2x" media="(min-width: 480px)">
+    <img class="picture" src="./images-portfolio/img1Mobile-450.jpg"
+        alt="ноутбук транслирует сайт" >                    
+</picture>
                         <div class="filterResult__overlay">
                             <p class="filterResult__paragraph">Технокряк это современная площадка распространения коронавируса.
                                 Компании
@@ -153,13 +159,16 @@
             <li class="filterResult__item">
                 <a href="" class="filterResult__link">
                     <div class="filterResult__box">
-                        <img class="picture" srcset="
-                                                        ./images-portfolio/img2-450.jpg  450w,
-                                                        ./images-portfolio/img2-900.jpg  900w
-                                                        " src="./images-portfolio/img2-450.jpg"
-                            alt="постер-схватка двух баскетболистов за мяч" width="370"
-                            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw">
-                        <div class="filterResult__overlay">
+<picture>
+    <source srcset="./images-portfolio/img2Desk-370.jpg  1x, 
+                            ./images-portfolio/img2Desk-740@2x.jpg 2x" media="(min-width: 1200px)">
+    <source srcset="./images-portfolio/img2Tab-354.jpg  1x, 
+                     ./images-portfolio/img2Tab-708@2x.jpg 2x" media="(min-width: 768px)">
+    <source srcset="./images-portfolio/img2Mobile-450.jpg  1x, 
+                    ./images-portfolio/img2Mobile-900@2x.jpg 2x" media="(min-width: 480px)">
+    <img class="picture" src="./images-portfolio/img2Mobile-450.jpg" alt="постер-схватка двух баскетболистов за мяч">
+</picture>
+<div class="filterResult__overlay">
                             <p class="filterResult__paragraph">Технокряк это современная площадка распространения коронавируса.
                                 Компании
                                 используют
@@ -177,12 +186,17 @@
             <li class="filterResult__item">
                 <a href="" class="filterResult__link">
                     <div class="filterResult__box">
-                        <img class="picture" srcset="
-                                    ./images-portfolio/img3-450.jpg  450w,
-                                    ./images-portfolio/img3-900.jpg  900w
-                                    " src="./images-portfolio/img3-450.jpg" alt="концепт логотипа ресторана" width="370"
-                            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw">
-                        <div class="filterResult__overlay">
+<picture>
+    <source srcset="./images-portfolio/img3Desk-370.jpg  1x, 
+                            ./images-portfolio/img3Desk-740@2x.jpg 2x" media="(min-width: 1200px)">
+    
+    <source srcset="./images-portfolio/img3Tab-354.jpg  1x, 
+                        ./images-portfolio/img3Tab-708@2x.jpg 2x" media="(min-width: 768px)">
+    <source srcset="./images-portfolio/img3Mobile-450.jpg  1x, 
+                        ./images-portfolio/img3Mobile-900@2x.jpg 2x" media="(min-width: 480px)">
+    <img class="picture" src="./images-portfolio/img3Mobile-450.jpg" alt="концепт логотипа ресторана">
+</picture>
+         <div class="filterResult__overlay">
                             <p class="filterResult__paragraph">Технокряк это современная площадка распространения коронавируса.
                                 Компании
                                 используют
@@ -200,11 +214,16 @@
             <li class="filterResult__item">
                 <a href="" class="filterResult__link">
                     <div class="filterResult__box">
-                        <img class="picture" srcset="
-                                    ./images-portfolio/img4-450.jpg  450w,
-                                    ./images-portfolio/img4-900.jpg  900w
-                                    " src="./images-portfolio/img4-450.jpg" alt="чорные наушники" width="370"
-                            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw">
+        <picture>
+                <source srcset="./images-portfolio/img4Desk-370.jpg  1x, 
+                        ./images-portfolio/img4Desk-740@2x.jpg 2x" media="(min-width: 1200px)">
+                
+                <source srcset="./images-portfolio/img4Tab-354.jpg  1x, 
+                                    ./images-portfolio/img4Tab-708@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./images-portfolio/img4Mobile-450.jpg  1x, 
+                                                ./images-portfolio/img4Mobile-900@2x.jpg 2x" media="(min-width: 480px)">
+                <img class="picture" src="./images-portfolio/img4Mobile-450.jpg" alt="чорные наушники">
+            </picture>
                         <div class="filterResult__overlay">
                             <p class="filterResult__paragraph">Технокряк это современная площадка распространения коронавируса.
                                 Компании
@@ -223,11 +242,15 @@
             <li class="filterResult__item">
                 <a href="" class="filterResult__link">
                     <div class="filterResult__box">
-                        <img class="picture" srcset="
-                                    ./images-portfolio/img5-450.jpg  450w,
-                                    ./images-portfolio/img5-900.jpg  900w
-                                    " src="./images-portfolio/img5-450.jpg" alt="две коробки" width="370"
-                            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw">
+                        <picture>
+    <source srcset="./images-portfolio/img5Desk-370.jpg  1x, 
+                         ./images-portfolio/img5Desk-740@2x.jpg 2x" media="(min-width: 1200px)">
+    <source srcset="./images-portfolio/img5Tab-354.jpg  1x, 
+                     ./images-portfolio/img5Tab-708@2x.jpg 2x" media="(min-width: 768px)">
+    <source srcset="./images-portfolio/img5Mobile-450.jpg  1x, 
+                         ./images-portfolio/img5Mobile-900@2x.jpg 2x" media="(min-width: 480px)">
+    <img class="picture" src="./images-portfolio/img5Mobile-450.jpg" alt="две коробки">
+</picture>
                         <div class="filterResult__overlay">
                             <p class="filterResult__paragraph">Технокряк это современная площадка распространения коронавируса.
                                 Компании
@@ -246,11 +269,15 @@
             <li class="filterResult__item">
                 <a href="" class="filterResult__link">
                     <div class="filterResult__box">
-                        <img class="picture" srcset="
-                                    ./images-portfolio/img6-450.jpg  450w,
-                                    ./images-portfolio/img6-900.jpg  900w
-                                    " src="./images-portfolio/img6-450.jpg" alt="монитор транслирует сайт" width="370"
-                            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw">
+                                     <picture>
+    <source srcset="./images-portfolio/img6Desk-370.jpg  1x, 
+                         ./images-portfolio/img6Desk-740@2x.jpg 2x" media="(min-width: 1200px)">
+    <source srcset="./images-portfolio/img6Tab-354.jpg  1x, 
+                     ./images-portfolio/img6Tab-708@2x.jpg 2x" media="(min-width: 768px)">
+<source srcset="./images-portfolio/img6Mobile-450.jpg  1x, 
+                     ./images-portfolio/img6Mobile-900@2x.jpg 2x" media="(min-width: 480px)">
+    <img class="picture" src="./images-portfolio/img6Mobile-450.jpg" alt="монитор транслирует сайт">
+</picture>           
                         <div class="filterResult__overlay">
                             <p class="filterResult__paragraph">Технокряк это современная площадка распространения коронавируса.
                                 Компании
@@ -269,11 +296,15 @@
             <li class="filterResult__item">
                 <a href="" class="filterResult__link">
                     <div class="filterResult__box">
-                        <img class="picture" srcset="
-                                    ./images-portfolio/img7-450.jpg  450w,
-                                    ./images-portfolio/img7-900.jpg  900w
-                                    " src="./images-portfolio/img7-450.jpg" alt=" концепт статьи в журнале" width="370"
-                            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw">
+    <picture>
+        <source srcset="./images-portfolio/img7Desk-370.jpg  1x, 
+                             ./images-portfolio/img7Desk-740@2x.jpg 2x" media="(min-width: 1200px)">
+    <source srcset="./images-portfolio/img7Tab-354.jpg  1x, 
+                     ./images-portfolio/img7Tab-708@2x.jpg 2x" media="(min-width: 768px)">
+    <source srcset="./images-portfolio/img7Mobile-450.jpg  1x, 
+                         ./images-portfolio/img7Mobile-900@2x.jpg 2x" media="(min-width: 480px)">
+    <img class="picture" src="./images-portfolio/img7Mobile-450.jpg" alt=" концепт статьи в журнале">
+</picture>
                         <div class="filterResult__overlay">
                             <p class="filterResult__paragraph">Технокряк это современная площадка распространения коронавируса.
                                 Компании
@@ -292,11 +323,16 @@
             <li class="filterResult__item">
                 <a href="" class="filterResult__link">
                     <div class="filterResult__box">
-                        <img class="picture" srcset="
-                                    ./images-portfolio/img8-450.jpg  450w,
-                                    ./images-portfolio/img8-900.jpg  900w
-                                    " src="./images-portfolio/img8-450.jpg" alt="бирка" width="370"
-                            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw">
+    <picture>
+    <source srcset="./images-portfolio/img8Desk-370.jpg  1x, 
+                         ./images-portfolio/img8Desk-740@2x.jpg 2x" media="(min-width: 1200px)">
+    
+    <source srcset="./images-portfolio/img8Tab-354.jpg  1x, 
+                     ./images-portfolio/img8Tab-708@2x.jpg 2x" media="(min-width: 768px)">
+    <source srcset="./images-portfolio/img8Mobile-450.jpg  1x, 
+                         ./images-portfolio/img8Mobile-900@2x.jpg 2x" media="(min-width: 480px)">
+    <img class="picture" src="./images-portfolio/img8Mobile-450.jpg" alt="бирка">
+</picture>            
                         <div class="filterResult__overlay">
                             <p class="filterResult__paragraph">Технокряк это современная площадка распространения коронавируса.
                                 Компании
@@ -315,11 +351,17 @@
             <li class="filterResult__item">
                 <a href="" class="filterResult__link">
                     <div class="filterResult__box">
-                        <img class="picture" srcset="
-                                    ./images-portfolio/img9-450.jpg  450w,
-                                    ./images-portfolio/img9-900.jpg  900w
-                                    " src="./images-portfolio/img9-450.jpg" alt="работа на ноутбуке" width="370"
-                            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw">
+                            <picture>
+        <source srcset="./images-portfolio/img9Desk-370.jpg  1x, 
+                        ./images-portfolio/img9Desk-740@2x.jpg 2x"
+            media="(min-width: 1200px)">                     
+        <source srcset="./images-portfolio/img9Tab-354.jpg  1x, 
+                    ./images-portfolio/img9Tab-708@2x.jpg 2x" media="(min-width: 768px)">
+        <source srcset="./images-portfolio/img9Mobile-450.jpg  1x, 
+                    ./images-portfolio/img9Mobile-900@2x.jpg 2x"
+            media="(min-width: 480px)">
+                                <img class="picture" src="./images-portfolio/img9Mobile-450.jpg" alt="работа на ноутбуке">
+                            </picture>
                         <div class="filterResult__overlay">
                             <p class="filterResult__paragraph">Технокряк это современная площадка распространения коронавируса.
                                 Компании

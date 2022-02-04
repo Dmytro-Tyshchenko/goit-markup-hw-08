@@ -64,14 +64,14 @@
 }
 .picture {
   display: flex;
-  width: 450px;
+  // width: 450px;
 
-  @media screen and (min-width: 768px) {
-    width: 354px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 370px;
-  }
+  // @media screen and (min-width: 768px) {
+  //   width: 354px;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   width: 370px;
+  // }
 }
 .filterResult__overlay {
   display: inline-block;
