@@ -49,14 +49,6 @@
   }
 }
 
-.filterResult__link {
-  @extend %a-link;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 100%;
-}
-
 .filterResult__box {
   position: relative;
   overflow: hidden;
