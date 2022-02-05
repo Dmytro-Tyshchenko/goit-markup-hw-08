@@ -10,17 +10,8 @@
   }
 }
 
-.filterResult__link {
-  @extend %a-link;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 .filterResult__item {
   display: flex;
-  flex-direction: column;
-  height: 100%;
   width: 450px;
   margin: 0;
   padding: 0;
@@ -58,20 +49,28 @@
   }
 }
 
+.filterResult__link {
+  @extend %a-link;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
 .filterResult__box {
   position: relative;
   overflow: hidden;
 }
 .picture {
   display: flex;
-  // width: 450px;
+  width: 450px;
 
-  // @media screen and (min-width: 768px) {
-  //   width: 354px;
-  // }
-  // @media screen and (min-width: 1200px) {
-  //   width: 370px;
-  // }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
 }
 .filterResult__overlay {
   display: inline-block;
@@ -124,18 +123,23 @@
     bottom: 63px;
   }
 }
-.filterResult__card {
-  width: 100%;
-  padding: 20px 24px;
-}
-.filterResult__card--padding {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-bottom: 54px;
-  }
-}
+// .filterResult__card {
+//   width: 100%;
+//   flex-grow: 1;
+//   padding: 20px 24px;
+// }
+// .filterResult__card--padding {
+//   @media screen and (min-width: 768px) and (max-width: 1199px) {
+//     padding-bottom: 54px;
+//   }
+// }
 .filterResult__title {
+  flex-grow: 1;
   @extend %h2, %main-font;
+  margin: 0;
   margin-bottom: 4px;
+  padding-top: 20px;
+  padding-left: 24px;
 
   font-weight: bold;
   font-size: 18px;
@@ -146,6 +150,8 @@
   @extend %main-font;
 
   margin: 0;
+  padding-bottom: 20px;
+  padding-left: 24px;
 
   color: $paragraph-text-color;
   font-size: 16px;
