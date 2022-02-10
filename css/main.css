@@ -32,7 +32,7 @@
   /* display:flex; */
 }
 
-.logo, .navigation__link, .contact .contact__link, .mobileNav__link, .nav__link, .group__link, .footerLogo__link, .footerContact__link, .footerNav__link {
+.logo, .navigation__link, .contact .contact__link, .mobileNav__link, .nav__link, .group__link, .footerLogo__link, .footerContact__link, .footerNav__link, .filterResult__link {
   text-decoration: none;
   /* display:flex; */
   -webkit-box-align: center;

@@ -91,6 +91,9 @@
     bottom: 0;
   }
 }
+.filterResult__link {
+  @extend %a-link;
+}
 
 .filterResult__paragraph {
   @extend %main-font;
