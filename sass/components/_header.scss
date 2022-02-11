@@ -65,13 +65,6 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  // &.is-open .iconMenu {
-  //   display: block;
-  // }
-  // &.is-open .iconCross {
-  //   display: none;
-  // }
-
   &:hover,
   &:focus {
     fill: $accent-color;
@@ -85,9 +78,7 @@
     display: none;
   }
 }
-// .iconMenu {
-//   display: none;
-// }
+
 // ----------------------------------------------
 .modalMenuContainer .buttonMobile--position {
   padding: 10px 15px 0 385px;
@@ -120,8 +111,6 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    // padding-left: 40px;
-    // padding-right: 15px;
     margin: 0;
     background-color: $primary-white-color;
     z-index: 999;
@@ -231,7 +220,6 @@
   @extend %ul-item;
   padding: 0;
   margin: 0;
-  // padding-left: 10px;
   @media screen and (max-width: 767px) {
     position: fixed;
     bottom: 134px;
@@ -252,7 +240,6 @@
   .contact__link {
     @extend %a-link, %main-font;
     font-weight: 500;
-
     letter-spacing: 0.02em;
 
     transition-property: color;
@@ -317,6 +304,7 @@
   height: 12px;
   margin: 0;
   margin-right: 10px;
+  padding: 0;
   fill: currentColor;
 
   @media screen and(max-width: 767px) {
@@ -342,6 +330,7 @@
   position: fixed;
   bottom: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0;
   padding-bottom: 6.04vh;
